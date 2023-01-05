@@ -1,0 +1,51 @@
+[package]
+name = "brick-dev"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.axum]
+version = "0.6.1"
+default-features = false
+features = ["headers", "json", "http2", "multipart", "tokio"]
+
+[dependencies.bb8-postgres]
+version = "0.8.1"
+default-features = false
+
+[dependencies.bb8-redis]
+version = "0.12.0"
+default-features = false
+
+[dependencies.jsonwebtoken]
+version = "8.2.0"
+default-features = false
+
+[dependencies.once_cell]
+version = "1.17.0"
+default-features = false
+
+[dependencies.reqwest]
+version = "0.11.13"
+default-features = false
+features = ["json"]
+
+[dependencies.serde]
+version = "1.0.152"
+default-features = false
+features = ["derive"]
+
+[dependencies.serde_json]
+version = "1.0.91"
+default-features = false
+features = ["alloc"]
+
+[dependencies.tokio]
+version = "1.24.0"
+default-features = false
+features = ["macros", "rt-multi-thread", "fs"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

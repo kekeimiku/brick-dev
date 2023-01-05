@@ -1,0 +1,11 @@
+[build]
+target = "aarch64-apple-darwin"
+
+[env]
+JWT_SECRET = ""
+JWT_SUB = ""
+JWT_COMPANY = ""
+JWT_EXP = "1728000"
+SOCKET_ADDR = "127.0.0.1:3001"
+PG_CONN = "postgresql://username:password@127.0.0.1:5432/postgres"
+REDIS_CONN = "redis://127.0.0.1:6379/"
